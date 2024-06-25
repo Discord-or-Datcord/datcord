@@ -59,6 +59,13 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Logback Classic Module -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.4.12</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
