@@ -1,45 +1,46 @@
 package io.datcord.service.command.impl;
 
-import io.datcord.Application;
 import io.datcord.entity.command.Command;
 import io.datcord.repository.CommandRepository;
 import io.datcord.service.command.CommandService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+
 /**
- * Implementation of the CommandService interface for handling CRUD operations related to commands.
+ * Implementation of {@link CommandService} that handles command operations.
  */
 @Service
 @RequiredArgsConstructor
 public class CommandServiceImpl implements CommandService {
 
     /**
-     * Command Service Logger instance
+     * Logger instance for logging information related to command operations.
      */
-    private static final Logger logger = LoggerFactory.getLogger(Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(CommandServiceImpl.class);
 
     /**
-     * Creates a new command.
+     * Retrieves a command based on its ID.
      *
-     * @param command The command object to create.
-     * @return The created command object.
-     * @throws DataIntegrityViolationException If there's a data integrity violation during the creation process.
+     * @param id the ID of the command to retrieve
+     * @return the Command object corresponding to the ID, or null if not found
      */
     @Override
-    public Command create(Command command) {
-        try {
-            Command savedCommand = commandRepository.save(command);
-            return savedCommand;
-        } catch (DataIntegrityViolationException e) {
-            String message = e.getMessage();
-            logger.error("Something went wrong with your request {}", message);
-            throw new DataIntegrityViolationException("Something went wrong with your request: " + message);
+    public Command readCommand(int id) {
+        logger.debug("Reading command {}", id);
+        Command command = commandRepository.findById(id).orElse(null);
+
+        if (command == null) {
+            logger.debug("No command with id {} found", id);
         }
+
+        return command;
     }
 
+    /**
+     * Repository for accessing command data.
+     */
     private final CommandRepository commandRepository;
 }

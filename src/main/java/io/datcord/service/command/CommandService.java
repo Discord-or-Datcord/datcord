@@ -2,22 +2,20 @@ package io.datcord.service.command;
 
 import io.datcord.entity.command.Command;
 
+import java.util.Collection;
+
+
 /**
- * This interface defines methods for handling CRUD (Create, Read, Update, Delete) operations
- * related to commands.
+ * Interface representing a service for handling commands.
  */
 public interface CommandService {
 
         /**
-         * Creates a new command.
+         * Reads a command given its ID.
          *
-         * @param command The command object to create.
-         * @return The created command object.
+         * @param id the ID of the command to read
+         * @return the Command object corresponding to the ID
          */
-        Command create(Command command);
+        Command readCommand(int id);
 
-        //TODO Other CRUD methods can be added here, such as:
-        //TODO  Command read(Long id);
-        //TODO  Command update(Long id, Command command);
-        //TODO  void delete(Long id);
 }
