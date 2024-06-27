@@ -1,0 +1,3 @@
+-- Add the test command from the association table
+INSERT INTO guild_command_association(id,command_id,guild_id)
+VALUES(2,1,1166431765863333970);
