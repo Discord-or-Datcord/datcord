@@ -24,7 +24,7 @@ import java.util.Optional;
  * Controller class for handling global commands
  */
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("api/v1/commands")
 @RequiredArgsConstructor
 public class GlobalCommandController {
 
@@ -36,12 +36,11 @@ public class GlobalCommandController {
 
     /**
      * Retrieves all global commands
-     * Shares an endpoint with commands for guilds but without the guild id parameter
      *
      * @param response the HttpServletResponse
      * @return ResponseEntity containing a collection of Command objects
      */
-    @GetMapping("/commands")
+    @GetMapping("/global")
     public ResponseEntity<Collection<Command>> getAllCommandsGlobalCommands(HttpServletResponse response) {
         logger.debug("Received request for all global commands");
 

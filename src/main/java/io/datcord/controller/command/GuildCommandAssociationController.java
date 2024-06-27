@@ -23,7 +23,7 @@ import java.util.Optional;
  * Controller class for handling guild command associations.
  */
 @RestController
-@RequestMapping("api/v1/")
+@RequestMapping("api/v1/commands")
 @RequiredArgsConstructor
 public class GuildCommandAssociationController {
 
@@ -40,7 +40,7 @@ public class GuildCommandAssociationController {
      * @param guildId  the ID of the guild
      * @return ResponseEntity containing a collection of Command objects
      */
-    @GetMapping("/commands")
+    @GetMapping("/guild")
     public ResponseEntity<Collection<Command>> getAllCommandsForGuildId(HttpServletResponse response, @RequestParam long guildId) {
         logger.debug("Received request for all available commands from guild {}", guildId);
 
