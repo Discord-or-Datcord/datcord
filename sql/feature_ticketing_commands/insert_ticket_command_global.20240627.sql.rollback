@@ -1,0 +1,2 @@
+DELETE FROM global_command
+WHERE command_id = 2;
