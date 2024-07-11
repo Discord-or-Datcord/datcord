@@ -18,12 +18,14 @@ import java.util.Collections;
 public class GuildCommandAssociationImplTest {
     @Test
     public void testGuildCommandAssociationForGuildId() {
-        Collection<Integer> commandIdForGuildId = guildCommandAssociationService.readAllCommandIdForGuildId(10L);
+        final long guildId = 10L; //change this to the guildId you are testing
+        Collection<Integer> commandIdForGuildId = guildCommandAssociationService.readAllCommandIdForGuildId(guildId);
         Assertions.assertEquals(Collections.EMPTY_LIST , commandIdForGuildId);
     }
     @Test
     public void testGuildIdAssociationForCommandId() {
-        Collection<Long> guildIdForCommandId = guildCommandAssociationService.readAllGuildIdForCommandId(1);
+        final int commandId = 1; //change this to the commandId you are testing
+        Collection<Long> guildIdForCommandId = guildCommandAssociationService.readAllGuildIdForCommandId(commandId);
         Assertions.assertEquals(Collections.EMPTY_LIST , guildIdForCommandId);
     }
 
