@@ -1,0 +1,1 @@
+delete from guild_feature_association where id = 1;

@@ -1,0 +1,1 @@
+delete from feature where id=1;
