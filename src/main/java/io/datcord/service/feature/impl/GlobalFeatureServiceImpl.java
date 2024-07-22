@@ -1,7 +1,7 @@
 package io.datcord.service.feature.impl;
 
 import io.datcord.entity.feature.GlobalFeature;
-import io.datcord.repository.GlobalFeatureRepository;
+import io.datcord.repository.feature.GlobalFeatureRepository;
 import io.datcord.service.feature.GlobalFeatureService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

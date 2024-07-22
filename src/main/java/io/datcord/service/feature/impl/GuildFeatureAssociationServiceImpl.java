@@ -1,8 +1,6 @@
 package io.datcord.service.feature.impl;
 
-import io.datcord.repository.GuildCommandAssociationRepository;
-import io.datcord.repository.GuildFeatureAssociationRepository;
-import io.datcord.service.command.GuildCommandAssociationService;
+import io.datcord.repository.feature.GuildFeatureAssociationRepository;
 import io.datcord.service.feature.GuildFeatureAssociationService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

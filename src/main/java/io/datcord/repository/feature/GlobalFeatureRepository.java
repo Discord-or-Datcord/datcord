@@ -1,4 +1,4 @@
-package io.datcord.repository;
+package io.datcord.repository.feature;
 
 import io.datcord.entity.feature.GlobalFeature;
 import org.springframework.data.jpa.repository.JpaRepository;

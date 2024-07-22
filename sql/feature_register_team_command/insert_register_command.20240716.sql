@@ -1,0 +1,2 @@
+INSERT INTO command(command)
+VALUES('{"name":"jira","description":"Registers a Jira user in the Database","options": [{"type":3,"name":"action","description":"The action to perform","required":true,"autocomplete":true},{"type":3,"name":"assignee","description":"The name of the Assignee as it appears in Jira","required":true}]}');

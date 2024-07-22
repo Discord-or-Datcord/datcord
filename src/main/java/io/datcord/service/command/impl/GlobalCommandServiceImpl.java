@@ -1,7 +1,7 @@
 package io.datcord.service.command.impl;
 
 import io.datcord.entity.command.GlobalCommand;
-import io.datcord.repository.GlobalCommandRepository;
+import io.datcord.repository.command.GlobalCommandRepository;
 import io.datcord.service.command.GlobalCommandService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
