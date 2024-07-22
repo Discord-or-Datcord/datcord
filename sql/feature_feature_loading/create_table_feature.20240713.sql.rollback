@@ -1,0 +1,3 @@
+-- deletes the entire feature tables
+-- NOTE this deletes the entire table not just the contents of the table
+drop table feature;

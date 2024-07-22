@@ -1,0 +1,7 @@
+CREATE TABLE command
+(
+    id      INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    command JSONB NOT NULL
+);
+
+

@@ -1,0 +1,4 @@
+DELETE
+FROM guild_command_association
+WHERE guild_id = 1166431765863333970
+  AND command_id = 1;

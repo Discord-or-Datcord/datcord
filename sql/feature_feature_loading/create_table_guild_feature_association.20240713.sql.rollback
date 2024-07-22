@@ -1,0 +1,3 @@
+-- deletes the entire table
+-- NOTE this deletes the entire table not just the contents of the table
+drop table guild_feature_association;

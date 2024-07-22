@@ -1,7 +1,7 @@
 package io.datcord.service.command.impl;
 
 import io.datcord.entity.command.Command;
-import io.datcord.repository.CommandRepository;
+import io.datcord.repository.command.CommandRepository;
 import io.datcord.service.command.CommandService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
@@ -31,7 +31,7 @@ public class CommandServiceImpl implements CommandService {
     public Command readCommand(int id) {
         logger.debug("Reading command {}", id);
         Command command = commandRepository.findById(id).orElse(null);
-
+        logger.debug("Found command {}", command);
         if (command == null) {
             logger.debug("No command with id {} found", id);
         }

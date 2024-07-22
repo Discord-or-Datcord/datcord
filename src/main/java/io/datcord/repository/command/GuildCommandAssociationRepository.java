@@ -1,4 +1,4 @@
-package io.datcord.repository;
+package io.datcord.repository.command;
 
 import io.datcord.entity.command.GuildCommandAssociation;
 import org.springframework.data.jpa.repository.JpaRepository;
